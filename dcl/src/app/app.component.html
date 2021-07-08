@@ -1,52 +1,9 @@
 <div class="container">
   <form class="card" [formGroup]="form" (ngSubmit)="submit()">
-    <label for="isInsured">
-      <input id="isInsured" type="checkbox" formControlName="isInsured" /> является страхователем
-    </label>
-    <div class="driver">
-      <div class="formControl" >
-        <label for="lastName">Фамилия:</label>
-        <input id="lastName" type="text" formControlName="lastName"/>
-      </div>
-      <div class="formControl">
-        <label for="firstName">Имя:</label>
-        <input id="firstName" type="text" formControlName="firstName" />
-      </div>
-      <div class="formControl">
-        <label for="middleName">Отчество (при наличии):</label>
-        <input id="middleName" type="text" formControlName="middleName" />
-      </div>
-      <div class="formControl">
-        <label for="birthday">Дата рождения:</label>
-        <input id="birthday" type="text" placeholder="_._._" formControlName="birthday" />
-      </div>
+    <app-driver-component [group]="form"></app-driver-component>
 
-      <div class="formControl">
-        <div class="driverLicenceLableBox">
-          <label for="driverLicence">В/У:</label
-          ><label for="foreigner"
-            ><input id="foreigner" type="checkbox" formControlName="foreigner" />
-            <span> Иностранное ВУ</span>
-          </label>
-        </div>
-        <input id="driverLicence" type="text" formControlName="driverLicence"/>
-      </div>
-      <div class="formControl">
-        <label for="startExpDate">Дата начала стажа</label>
-        <input id="startExpDate" type="text" formControlName="startExpDate" />
-      </div>
-      <div class="formControl">
-        <label for="oldDriverLicence">
-          <input id="oldDriverLicence" type="checkbox" formControlName="oldDriverLicence"/>
-          Добавить предыдущее ВУ
-        </label>
-      </div>
-      <div class="formControl">
-        <div class="coefficient">
-          <p>КБМ: <span> 1,55</span></p>
-        </div>
-      </div>
-    </div>
     <button type="submit">отправить</button>
   </form>
 </div>
+
+<pre>{{ form.value | json }}</pre>
