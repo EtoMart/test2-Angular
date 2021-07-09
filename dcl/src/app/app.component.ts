@@ -1,32 +1,38 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {Component, ElementRef, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
+import {DriverComponentComponent} from './modules/driver-module/driver-component/driver-component.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-form: FormGroup;
 
-ngOnInit(){
-  this.form = new FormGroup({
+export class AppComponent{
 
-      lastName: new FormControl('', [Validators.required]),
-      firstName: new FormControl(''),
-      middleName: new FormControl(''),
-      birthday: new FormControl(''),
-      foreigner: new FormControl(''),
-      driverLicence: new FormControl(''),
-      startExpDate: new FormControl(''),
-      oldDriverLicence: new FormControl(''),
-      isInsured: new FormControl('')
+constructor(private formBuilder: FormBuilder){
+
+  this.form = formBuilder.group({
+      lastName: ['', [Validators.required]],
+      firstName: ['', []],
+      middleName: ['', []],
+      birthday: ['', []],
+      foreigner: ['', []],
+      driverLicence: ['', []],
+      startExpDate: ['', []],
+      oldDriverLicence: ['', []],
+      isInsured: ['', []]
   });
 }
+form: FormGroup;
+  @ViewChild(DriverComponentComponent)
+  public driverComponent: DriverComponentComponent;
+
 
 submit(){
-  console.log("form submitted " , this.form);
+  console.log('form submitted ' , this.form);
   const formData = {...this.form.value};
-  console.log("Form value:", formData );
+  console.log('Form value:', formData );
 }
+
 }
