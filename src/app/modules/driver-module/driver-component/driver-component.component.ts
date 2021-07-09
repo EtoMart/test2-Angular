@@ -8,7 +8,6 @@ import {FormGroup} from '@angular/forms';
 })
 
 export class DriverComponentComponent {
-  @Input('group')
-  public adressForm: FormGroup;
+@Input() parentForm: FormGroup;
 
 }
