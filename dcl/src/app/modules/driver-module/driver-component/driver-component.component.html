@@ -1,30 +1,30 @@
-<fieldset [formGroup]="parentForm" #formChild>
+<fieldset [formGroup]="parentForm">
   <label for="isInsured">
-    <input id="isInsured" type="checkbox" formControlName="isInsured" /> является страхователем
+    <input id="isInsured" type="checkbox" formControlName="isInsured"/> является страхователем
   </label>
   <div class="driver">
-    <div class="formControl" >
+    <div class="formControl">
       <label for="lastName">Фамилия:</label>
       <input id="lastName" type="text" formControlName="lastName"/>
     </div>
     <div class="formControl">
       <label for="firstName">Имя:</label>
-      <input id="firstName" type="text" formControlName="firstName" />
+      <input id="firstName" type="text" formControlName="firstName"/>
     </div>
     <div class="formControl">
       <label for="middleName">Отчество (при наличии):</label>
-      <input id="middleName" type="text" formControlName="middleName" />
+      <input id="middleName" type="text" formControlName="middleName"/>
     </div>
     <div class="formControl">
       <label for="birthday">Дата рождения:</label>
-      <input id="birthday" type="text" placeholder="_._._" formControlName="birthday" />
+      <input id="birthday" type="text" placeholder="_._._" formControlName="birthday"/>
     </div>
 
     <div class="formControl">
       <div class="driverLicenceLableBox">
         <label for="driverLicence">В/У:</label
         ><label for="foreigner"
-      ><input id="foreigner" type="checkbox" formControlName="foreigner" />
+      ><input id="foreigner" type="checkbox" formControlName="foreigner"/>
         <span> Иностранное ВУ</span>
       </label>
       </div>
@@ -32,7 +32,7 @@
     </div>
     <div class="formControl">
       <label for="startExpDate">Дата начала стажа</label>
-      <input id="startExpDate" type="text" formControlName="startExpDate" />
+      <input id="startExpDate" type="text" formControlName="startExpDate"/>
     </div>
     <div class="formControl">
       <label for="oldDriverLicence">

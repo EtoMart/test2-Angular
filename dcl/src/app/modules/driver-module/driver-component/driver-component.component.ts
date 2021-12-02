@@ -1,13 +1,23 @@
-import { Component, Input} from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-driver-component',
   templateUrl: './driver-component.component.html',
   styleUrls: ['./driver-component.component.css'],
 })
-
 export class DriverComponentComponent {
-@Input() parentForm: FormGroup;
+  constructor(private formBuilder: FormBuilder) {}
 
+  public parentForm = this.formBuilder.group({
+    lastName: ['', [Validators.required]],
+    firstName: ['', []],
+    middleName: ['', []],
+    birthday: ['', []],
+    foreigner: ['', []],
+    driverLicence: ['', []],
+    startExpDate: ['', []],
+    oldDriverLicence: ['', []],
+    isInsured: ['', []],
+  });
 }
