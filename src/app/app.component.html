@@ -1,6 +1,6 @@
 <div class="container">
     <app-driver-component></app-driver-component>
-    <button type="submit">отправить</button>
+    <button type="submit" (click)="submit()">отправить</button>
 </div>
 <br>
 <br>
@@ -13,4 +13,4 @@
   <br>
   End ViewChild
 </div>
-<pre>{{ form.value  |json}}</pre>
+<pre>{{ this.driverComponent.parentForm?.value  |json}}</pre>

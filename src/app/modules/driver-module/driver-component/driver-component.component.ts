@@ -20,4 +20,5 @@ export class DriverComponentComponent {
     oldDriverLicence: ['', []],
     isInsured: ['', []],
   });
+
 }
