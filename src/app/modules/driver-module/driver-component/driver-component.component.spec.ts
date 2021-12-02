@@ -8,9 +8,8 @@ describe('DriverComponentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DriverComponentComponent ]
-    })
-    .compileComponents();
+      declarations: [DriverComponentComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

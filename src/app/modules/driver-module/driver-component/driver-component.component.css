@@ -1,6 +1,7 @@
 * {
   margin: 0;
 }
+
 .container {
   width: 1320px;
   height: 226px;
@@ -25,6 +26,7 @@ form {
   margin-bottom: 20px;
   margin-right: 20px;
 }
+
 input {
   background-color: #f3f6f9;
   border: none;
@@ -42,6 +44,7 @@ input {
 #oldDriverLicence {
   margin-top: 40px;
 }
+
 .driverLicenceLableBox {
   display: flex;
   justify-content: space-between;
@@ -56,10 +59,12 @@ input {
   border-radius: 3px;
   background-color: #f3f6f9;
 }
+
 .coefficient p {
   margin: auto;
   font-weight: bold;
 }
+
 p span {
   color: #38af43;
 }
