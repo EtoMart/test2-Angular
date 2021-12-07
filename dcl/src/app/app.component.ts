@@ -7,6 +7,7 @@ import { DriverComponentComponent } from './modules/driver-module/driver-compone
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+
   constructor() {
   }
 
