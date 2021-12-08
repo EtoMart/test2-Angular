@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DriverModuleModule } from './modules/driver-module/driver-module.module';
+import {RouterModule} from '@angular/router';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,6 +14,8 @@ import { DriverModuleModule } from './modules/driver-module/driver-module.module
     FormsModule,
     ReactiveFormsModule,
     DriverModuleModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
