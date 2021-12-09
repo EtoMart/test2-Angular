@@ -4,21 +4,20 @@ import { FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-driver-component',
   templateUrl: './driver-component.component.html',
-  styleUrls: ['./driver-component.component.css'],
+  styleUrls: ['./driver-component.component.scss'],
 })
 export class DriverComponentComponent {
-  constructor(private formBuilder: FormBuilder) {}
-
   public parentForm = this.formBuilder.group({
     lastName: ['', [Validators.required]],
     firstName: ['', []],
     middleName: ['', []],
     birthday: ['', []],
-    foreigner: ['', []],
+    foreigner: [false, []],
     driverLicence: ['', []],
     startExpDate: ['', []],
-    oldDriverLicence: ['', []],
-    isInsured: ['', []],
+    oldDriverLicence: [false, []],
+    isInsured: [false, []],
   });
 
+  constructor(private formBuilder: FormBuilder) {}
 }
