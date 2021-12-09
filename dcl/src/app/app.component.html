@@ -1,18 +1,7 @@
-<div class="container">
-    <app-driver-component></app-driver-component>
-    <button type="submit" (click)="submit()">отправить</button>
-</div>
-<br>
-<br>
-<br>
-<br>
+<button routerLink="./form">Form</button>
+<button routerLink="./result">Result</button>
 <br>
 <br>
 
-<div>
-  <br>
-  End ViewChild
-</div>
-<pre>{{ this.driverComponent.parentForm?.value  |json}}</pre>
 
 <router-outlet></router-outlet>
