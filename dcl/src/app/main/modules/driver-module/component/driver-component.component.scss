@@ -1,10 +1,10 @@
 * {
   margin: 0;
 }
+
 .container {
   width: 1320px;
   height: 226px;
-  margin: auto;
 }
 
 form {
@@ -24,24 +24,26 @@ form {
   flex-direction: column;
   margin-bottom: 20px;
   margin-right: 20px;
+
+  input[type="text"] {
+    margin-top: 5px;
+    border: none;
+    height: 40px;
+    border-radius: 3px;
+    padding: 5px;
+  }
 }
+
 input {
   background-color: #f3f6f9;
   border: none;
   outline: none;
 }
 
-.formControl input[type="text"] {
-  margin-top: 5px;
-  border: none;
-  height: 40px;
-  border-radius: 3px;
-  padding: 5px;
-}
-
 #oldDriverLicence {
   margin-top: 40px;
 }
+
 .driverLicenceLableBox {
   display: flex;
   justify-content: space-between;
@@ -55,12 +57,15 @@ input {
   width: 150px;
   border-radius: 3px;
   background-color: #f3f6f9;
-}
-.coefficient p {
-  margin: auto;
-  font-weight: bold;
-}
-p span {
-  color: #38af43;
+
+  p {
+    margin: auto;
+    font-weight: bold;
+  }
 }
 
+p {
+  span {
+    color: #38af43;
+  }
+}

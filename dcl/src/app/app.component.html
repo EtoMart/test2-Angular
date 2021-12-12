@@ -1,18 +1,7 @@
-<div class="container">
-  <form class="card" [formGroup]="form" (ngSubmit)="submit()">
-    <app-driver-component [parentForm] = "form"></app-driver-component>
-    <button type="submit">отправить</button>
-  </form>
-</div>
-<br>
-<br>
-<br>
-<br>
+<button routerLink="./form">Form</button>
+<button routerLink="./result">Result</button>
 <br>
 <br>
 
-<div>
-  <br>
-  End ViewChild
-</div>
-<pre>{{ form.value  |json}}</pre>
+
+<router-outlet></router-outlet>
